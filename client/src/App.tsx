@@ -7,10 +7,11 @@ function App() {
   function addNewBike(newBike){
     setBikes([...bikes, newBike])
   }
+
   return (
     <div className="App">
       <h1>Bike components</h1>
-      <Form />
+      <Form onAddNewBike={addNewBike} />
       {bikes.map(bike => (<div>bike.name</div>))}
     </div>
   );
